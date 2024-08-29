@@ -2,34 +2,60 @@
 
 ## Overview
 
-The Hospital Management System (HMS) is a Java-based application that facilitates the management of hospital operations. Designed with Java Swing, the application offers a graphical user interface for managing patient records, doctor schedules, appointments, and billing processes.
+The Hospital Management System (HMS) is a Java-based application designed to manage various aspects of hospital operations. This application includes features such as managing patient records, doctor schedules, appointments, and billing. The GUI is built using Java Swing, providing an intuitive interface for users to interact with the system.
 
 ## Features
 
-- **Patient Management:** Efficiently manage patient information, including personal details, medical history, and contact information.
-- **Doctor Scheduling:** Organize and manage doctors' schedules, including availability and shift timings.
-- **Appointments:** Schedule, modify, and cancel patient appointments with doctors.
-- **Billing:** Track and manage billing processes, including generating invoices and processing payments.
+- **Patient Management:** Add, update, and view patient records.
+- **Doctor Scheduling:** Manage doctor schedules and availability.
+- **Appointments:** Schedule and manage patient appointments.
+- **Billing:** Handle billing and financial transactions.
 
 ## Installation
 
 ### Prerequisites
 
-- Java Development Kit (JDK) 8 or higher
-- Integrated Development Environment (IDE) such as IntelliJ IDEA or Eclipse
+- **Java Development Kit (JDK) 8 or higher**
+- **Integrated Development Environment (IDE):** IntelliJ IDEA or Eclipse
+- **MySQL Database:** Ensure MySQL is installed and running
+- **JDBC Driver:** MySQL Connector/J for connecting Java applications to MySQL
 
 ### Steps
 
-1. ***Clone the Repository:***
+1. **Clone the Repository:**
 
-   Open a terminal and clone the repository using:
+Open a terminal and clone the repository using:
 
-   ```bash
-          git clone https://github.com/NagajothiRamesh/HospitalManagement.git
+      git clone https://github.com/NagajothiRamesh/HospitalManagement.git
+
 2.***Navigate to the Project Directory:***
                    
-                   cd HospitalManagement
-                   
+     cd HospitalManagement
+
+3.**Set Up MySQL Database:**
+
+  Create a new database in MySQL for the application:
+
+     CREATE DATABASE hospital_management;
+
+Import the database schema if provided (usually a .sql file) using:
+
+     mysql -u your_username -p hospital_management < path_to_schema_file.sql
+
+4.***Configure Database Connection:***
+
+   Open the dbconfig.properties (or similar configuration file) and update the database connection details:
+
+      db.url=jdbc:mysql://localhost:3306/hospital_management
+      db.username=your_username
+      db.password=your_password
+
+5.***Install JDBC Driver:***
+
+   Download MySQL Connector/J from MySQL's website.
+
+   Add the JDBC driver JAR file to your IDE's build path or include it in your project's lib directory.
+
 3 ***.Open the Project:***
 
    Open the project in your preferred IDE:
